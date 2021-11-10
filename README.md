@@ -9,6 +9,7 @@ Movie Ticket Reservation Website Demo
 ```
 docker run --name=mysql_theater -e MYSQL_ROOT_PASSWORD=popcat -e MYSQL_DATABASE=theaterDB -p 3307:3306 -d mysql
 ```
+จากนั้นทำการรัน และเรียกใช้เว็บไซต์ที่ localhost:8090/
 
 # จัดทำโดย
 - นายกิตติธัช จึงโสภณวิทวัส รหัสนิสิต 6110450022
