@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  theater-mysql:
+    container_name: theater-mysql
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: theaterDB
+      MYSQL_ROOT_PASSWORD: popcat
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+    networks:
+      - theater-network
+    restart: always
+
+  theater-api:
+    restart: on-failure
+    container_name: theater-api
+    build:
+      context: .
+      dockerfile: theater-api.dockerfile
+    image: theater-api:latest
+    expose:
+      - 8090
+    ports:
+      - 8090:8090
+    networks:
+      - theater-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/theaterDB
+    depends_on:
+      - theater-mysql
+
+networks:
+  theater-network:
+    driver: bridge

@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>place</groupId>
-	<artifactId>Theater</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>theater</artifactId>
+	<version>1.0.2</version>
 	<name>Theater</name>
 	<description>Theater Project</description>
 	<properties>
