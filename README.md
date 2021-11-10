@@ -5,7 +5,10 @@ Movie Ticket Reservation Website Demo
 
 
 # การรันโปรเจค
-ทำการติดตั้งและรัน Database บน Docker
+ทำการติดตั้งและรัน Database บน Docker ด้วยคำสั่ง
+'''
+docker run --name=mysql_theater -e MYSQL_ROOT_PASSWORD=popcat -e MYSQL_DATABASE=theaterDB -p 3307:3306 -d mysql
+'''
 
 # จัดทำโดย
 - นายกิตติธัช จึงโสภณวิทวัส รหัสนิสิต 6110450022
